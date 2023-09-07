@@ -33,7 +33,7 @@ opacity:0.9;
 color: #DF4601;
 }
 #magicnumberwidget h2 {
-margin: 0 0 3px 0;
+margin: 0 0 18px 0;
 font-family: 'Playball', script;
 font-size: 1.8em;
 position:relative;
@@ -95,7 +95,6 @@ font-size: 1.05em;
 margin-bottom: -5px;
 line-height: normal;
 }
-@media (min-width: 500px) {
 #magicnumberwidget #timestamp {
 width: auto;
 position: absolute;
@@ -107,8 +106,14 @@ padding: 0 8px 8px 0;
 #magicnumberwidgetoverlay {
 height:222px;
 }
+#magicnumberwidget #playoffbox, #magicnumberwidget #aleastbox {
+width: 85px;
+}
+@media (min-width: 500px) {
 #magicnumberwidget h2 {
 font-size: 2.4em;
+margin: 0 0 2px 0;
+​
 }
 #magicnumberwidget #remaining, #magicnumberwidget .magicdetails {
 font-size: .75em;
@@ -116,9 +121,7 @@ font-size: .75em;
 #magicnumberwidget .magicnum {
 font-size: 3.67em;
 }
-#magicnumberwidget #playoffbox, #magicnumberwidget #aleastbox {
-width: 85px;
-}
+​
 #magicnumberwidget .berth {
 font-size: 1.15em;
 }
@@ -177,7 +180,7 @@ async function renderTracker() {
 }
  renderTracker();
 </script>
-
+​
 <div id="magicnumberwidget">
 <a target="_blank" href="https://www.baltimoresun.com/sports/orioles/bs-sp-orioles-magic-number-tracker-playoffs-al-east-20230907-kjavrqumnbdytmblqqqwa2hqnm-story.html">
 <div id="magicnumberwidgetoverlay">
