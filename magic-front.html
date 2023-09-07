@@ -1,0 +1,207 @@
+<html>
+<head>
+<title>Orioles magic number tracker</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!--START TRACKER CODE-->
+<style>
+#magicnumberwidget {
+width: 100%;
+text-align: center;
+font-family:"Lato",sans-serif;
+background:url(https://www.baltimoresun.com/resizer/G8DoaJBmPWBXcLQ4zKSZLWHAdPk=/arc-anglerfish-arc2-prod-tronc/public/KFDCUF5EMFDHBCEZAYFL7OJQBQ.jpg) no-repeat;
+background-size: cover;
+background-position: 40% 90%;
+position:relative;
+}
+#magicnumberwidget a {
+color: inherit; 
+  text-decoration: inherit; 
+}
+#magicnumberwidgetoverlay {
+position:relative;
+top:0;
+left:0;
+height:178px;
+width:100%;
+background-color:#fff;
+opacity:0.9;
+}
+#magicnumberwidget .orioles {
+color: #DF4601;
+}
+#magicnumberwidget h2 {
+margin: 0 0 3px 0;
+font-family: 'Playball', script;
+font-size: 1.8em;
+position:relative;
+line-height: normal;
+}
+#magicnumberwidget .orange {
+color: #DF4601;
+}
+#magicnumberwidget span {
+display: inline-block;
+}
+#magicnumberwidget #remaining, #magicnumberwidget .magicdetails, #magicnumberwidget #timestamp {
+font-weight: 100;
+font-size: .67em;
+font-style: italic;
+}
+#magicnumberwidget .magicdetails {
+line-height: 108%;
+font-size: .67em;
+margin-top: 3px;
+}
+#magicnumberwidget #numberboxes {
+width: 100%;
+height: 130px;
+margin-top: 4px;
+position:relative;
+}
+#magicnumberwidget #playoffbox, #magicnumberwidget #aleastbox {
+display: inline-block;
+width: 80px;
+height: 100%;
+}
+#magicnumberwidget #playoffbox {
+margin-right: 7px;
+}
+#magicnumberwidget #aleastbox {
+margin-left: 7px;
+}
+#magicnumberwidget .magicnum {
+border: 2px solid #DF4601;
+font-weight: 700;
+font-size: 2.8em;
+border-radius: 4px;
+color: #000;
+background-color: rgba(255, 255, 255, 0.85);
+margin: 2px 0 -1px 0;
+line-height: normal;
+}
+#magicnumberwidget #timestamp {
+width: 100%;
+line-height: normal;
+position:relative;
+top: -17px;
+}
+#magicnumberwidget .berth {
+font-weight: 700;
+text-transform: uppercase;
+font-size: 1.05em;
+margin-bottom: -5px;
+line-height: normal;
+}
+@media (min-width: 500px) {
+#magicnumberwidget #timestamp {
+width: auto;
+position: absolute;
+bottom: 0;
+right: 0;
+top: auto;
+padding: 0 8px 8px 0;
+}
+#magicnumberwidgetoverlay {
+height:222px;
+}
+#magicnumberwidget h2 {
+font-size: 2.4em;
+}
+#magicnumberwidget #remaining, #magicnumberwidget .magicdetails {
+font-size: .75em;
+}
+#magicnumberwidget .magicnum {
+font-size: 3.67em;
+}
+#magicnumberwidget #playoffbox, #magicnumberwidget #aleastbox {
+width: 85px;
+}
+#magicnumberwidget .berth {
+font-size: 1.15em;
+}
+}
+@media (min-width: 625px) {
+#magicnumberwidget #playoffbox {
+margin-right: 10px;
+}
+#magicnumberwidget #aleastbox {
+ margin-left: 10px;
+ }
+ #magicnumberwidget .magicnum {
+font-size: 3.75em;
+}
+#magicnumberwidget #playoffbox, #magicnumberwidget #aleastbox {
+width: 90px;
+}
+#magicnumberwidget .berth {
+font-size: 1.175em;
+}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Playball&display=swap" rel="stylesheet">
+<script>
+async function getTracker() {
+    let url = 'https://raw.githubusercontent.com/Baltimore-Sun/orioles-magic-numbers/main/output.json';
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
+async function renderTracker() {
+    let tracker = await getTracker();
+    let orioleswins = tracker.values[1][1];
+    let orioleslosses = tracker.values[2][1];
+    let competitor = tracker.values[3][1];
+    let fourthwc = tracker.values[5][1];
+    let updated = tracker.values[7][1];
+    let playoffs = tracker.values[12][1];
+    let aleast = tracker.values[13][1];
+    let gamesleft = tracker.values[14][1];
+	var playoffnumber = document.getElementById("playoffs");
+	playoffnumber.innerHTML = playoffs;
+	var aleastnumber = document.getElementById("aleast");
+	aleastnumber.innerHTML = aleast;
+	var updateddate = document.getElementById("updated");
+	updateddate.innerHTML = updated;
+	var competitorname = document.getElementById("competitor");
+	competitorname.innerHTML = competitor;
+	var fourthwcname = document.getElementById("fourthwc");
+	fourthwcname.innerHTML = fourthwc;
+}
+ renderTracker();
+</script>
+
+<div id="magicnumberwidget">
+<a target="_blank" href="https://www.baltimoresun.com/sports/orioles/bs-sp-orioles-magic-number-tracker-playoffs-al-east-20230907-kjavrqumnbdytmblqqqwa2hqnm-story.html">
+<div id="magicnumberwidgetoverlay">
+<h2><span class="Orioles">Orioles</span> magic numbers</h2>
+<div id="numberboxes">
+<div id="playoffbox">
+<div class="berth">playoffs</div>
+<div class="magicdetails">clinched with</div>
+<div class="magicnum"><span id="playoffs"></span></div>
+<div class="magicdetails">O's wins <span class="orange">or</span><br><span id="fourthwc"></span> losses</div>
+</div>
+<div id="aleastbox">
+<div class="berth">AL East</div>
+<div class="magicdetails">clinched with</div>
+<div class="magicnum"><span id="aleast"></span></div>
+<div class="magicdetails">O's wins <span class="orange">or</span><br><span id="competitor"></span> losses</div>
+</div>
+</div>
+<span id="timestamp">Updated <span id="updated"></updated></span>
+</div>
+</div>
+</a>
+</div>
+<!--END TRACKER CODE-->
+</body>
+</html>
+
