@@ -86,7 +86,7 @@ line-height: normal;
 width: 100%;
 line-height: normal;
 position:relative;
-top: -17px;
+top: 17px;
 }
 #magicnumberwidget .berth {
 font-weight: 700;
@@ -95,16 +95,8 @@ font-size: 1.05em;
 margin-bottom: -5px;
 line-height: normal;
 }
-#magicnumberwidget #timestamp {
-width: auto;
-position: absolute;
-bottom: 0;
-right: 0;
-top: auto;
-padding: 0 8px 8px 0;
-}
 #magicnumberwidgetoverlay {
-height:222px;
+height:230px;
 }
 #magicnumberwidget #playoffbox, #magicnumberwidget #aleastbox {
 width: 85px;
@@ -113,7 +105,7 @@ width: 85px;
 #magicnumberwidget h2 {
 font-size: 2.4em;
 margin: 0 0 2px 0;
-​
+
 }
 #magicnumberwidget #remaining, #magicnumberwidget .magicdetails {
 font-size: .75em;
@@ -121,7 +113,7 @@ font-size: .75em;
 #magicnumberwidget .magicnum {
 font-size: 3.67em;
 }
-​
+
 #magicnumberwidget .berth {
 font-size: 1.15em;
 }
@@ -168,43 +160,42 @@ async function renderTracker() {
     let aleast = tracker.values[13][1];
     let gamesleft = tracker.values[14][1];
 	var playoffnumber = document.getElementById("playoffs");
-	playoffnumber.innerHTML = playoffs;
+	//playoffnumber.innerHTML = playoffs;
 	var aleastnumber = document.getElementById("aleast");
 	aleastnumber.innerHTML = aleast;
 	var updateddate = document.getElementById("updated");
-	updateddate.innerHTML = updated;
+	//updateddate.innerHTML = updated;
 	var competitorname = document.getElementById("competitor");
 	competitorname.innerHTML = competitor;
 	var fourthwcname = document.getElementById("fourthwc");
-	fourthwcname.innerHTML = fourthwc;
+	//fourthwcname.innerHTML = fourthwc;
+
 }
  renderTracker();
 </script>
-​
+
+
 <div id="magicnumberwidget">
-<a target="_blank" href="https://www.baltimoresun.com/sports/orioles/bs-sp-orioles-magic-number-tracker-playoffs-al-east-20230907-kjavrqumnbdytmblqqqwa2hqnm-story.html">
 <div id="magicnumberwidgetoverlay">
 <h2><span class="Orioles">Orioles</span> magic numbers</h2>
 <div id="numberboxes">
 <div id="playoffbox">
 <div class="berth">playoffs</div>
 <div class="magicdetails">clinched with</div>
-<div class="magicnum"><span id="playoffs"></span></div>
-<div class="magicdetails">O's wins <span class="orange">and/or</span><br><span id="fourthwc"></span> losses</div>
+<div class="magicnum">8<span id="playoffs"></span></div>
+<div class="magicdetails undernum">O's wins <span class="orange">and/or</span> rival losses<span id="fourthwc"></span></div>
 </div>
 <div id="aleastbox">
 <div class="berth">AL East</div>
 <div class="magicdetails">clinched with</div>
 <div class="magicnum"><span id="aleast"></span></div>
-<div class="magicdetails">O's wins <span class="orange">and/or</span><br><span id="competitor"></span> losses</div>
+<div class="magicdetails undernum">O's wins <span class="orange">and/or</span><br><span id="competitor"></span> losses</div>
 </div>
 </div>
-<span id="timestamp">Updated <span id="updated"></updated></span>
+<span id="timestamp">Playoffs updated 6:45 p.m. 9/8 via MLB data. AL East updated 9:30 p.m. 9/7. <span id="updated"></updated></span>
 </div>
 </div>
-</a>
 </div>
 <!--END TRACKER CODE-->
 </body>
 </html>
-
