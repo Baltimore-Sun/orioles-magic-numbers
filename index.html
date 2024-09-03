@@ -169,15 +169,15 @@ async function renderTracker() {
 	numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
 	var aleastnumber = document.getElementById("aleast");
-	//aleastnumber.innerHTML = aleast;
+	aleastnumber.innerHTML = aleast;
 	var updateddate = document.getElementById("updated");
-	//updateddate.innerHTML = updated;
+	updateddate.innerHTML = updated;
 	var mlbupdated = document.getElementById("mlbup");
-	//mlbupdated.innerHTML = mlbup;
+	mlbupdated.innerHTML = mlbup;
 	var competitorname = document.getElementById("competitor");
-	//competitorname.innerHTML = competitor;
+	competitorname.innerHTML = competitor;
 	var mlbmagic = document.getElementById("mlbmagic");
-	//mlbmagic.innerHTML = mlbmn;
+	mlbmagic.innerHTML = mlbmn;
 
 }
  renderTracker();
@@ -190,18 +190,18 @@ async function renderTracker() {
 <div id="numberboxes">
 <div id="playoffbox">
 <div class="berth">playoffs</div>
-<div class="magicdetails">clinched</div>
-<div class="magicnum"><span id="mlbmagic">&#10003;</span></div>
-<div class="magicdetails undernum">Playoff berth secured 9/17<span id="fourthwc"></span></div>
+<div class="magicdetails">clinched with</div>
+<div class="magicnum"><span id="mlbmagic"></span></div>
+<div class="magicdetails undernum">O's wins <span class="orange">and/or</span> rival losses<span id="fourthwc"></span></div>
 </div>
 <div id="aleastbox">
 <div class="berth">AL East</div>
-<div class="magicdetails">clinched</div>
-<div class="magicnum"><span id="aleast">&#10003</span></div>
-<div class="magicdetails undernum">AL East title secured 9/28<span id="competitor"></span></div>
+<div class="magicdetails">clinched with</div>
+<div class="magicnum"><span id="aleast"></span></div>
+<div class="magicdetails undernum">O's wins <span class="orange">and/or</span><br><span id="competitor"></span> losses</div>
 </div>
 </div>
-<span id="timestamp"><span id="mlbup"></span>Updated 9:05 p.m. 9/28<span id="updated"></span></span>
+<span id="timestamp">Playoffs updated <span id="mlbup"></span> via MLB data. AL East updated <span id="updated"></span>.</span>
 </div>
 </div>
 </a>
