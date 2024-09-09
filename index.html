@@ -42,6 +42,9 @@ line-height: normal;
 #magicnumberwidget .orange {
 color: #DF4601;
 }
+#magicnumberwidget .blue {
+color: #003087;
+}
 #magicnumberwidget span {
 display: inline-block;
 }
@@ -163,13 +166,13 @@ async function renderTracker() {
     let mlbmn = tracker.values[5][1];
     let updated = tracker.values[7][1];
     let mlbup = tracker.values[6][1];  
-    let aleast = tracker.values[13][1];
     let gamesleft = tracker.values[14][1];
+    let yanksnum = tracker.values[16][1];
 	
 	numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
 	var aleastnumber = document.getElementById("aleast");
-	aleastnumber.innerHTML = aleast;
+    aleastnumber.innerHTML = yanksnum;
 	var updateddate = document.getElementById("updated");
 	updateddate.innerHTML = updated;
 	var mlbupdated = document.getElementById("mlbup");
@@ -196,9 +199,9 @@ async function renderTracker() {
 </div>
 <div id="aleastbox">
 <div class="berth">AL East</div>
-<div class="magicdetails">clinched with</div>
-<div class="magicnum"><span id="aleast"></span></div>
-<div class="magicdetails undernum">O's wins <span class="orange">and/or</span><br><span id="competitor"></span> losses</div>
+<div class="magicdetails">eliminated with</div>
+<div class="magicnum" style="border-color:#003087;"><span id="aleast"></span></div>
+<div class="magicdetails undernum"><span id="competitor"></span> wins <span class="blue">and/or</span> O's losses</div>
 </div>
 </div>
 <span id="timestamp">Playoffs updated <span id="mlbup"></span><!--via MLB data-->. AL East updated <span id="updated"></span>.</span>
