@@ -7,6 +7,33 @@
 <body>
 <!--START TRACKER CODE-->
 <style>
+     #numberboxes {
+
+clear: left;
+     }
+#sponsor {
+   width:fit-content;
+    height: 40px;
+    margin: 0 auto 10px auto;
+}
+#sponslogo {
+    float: left;
+   
+    text-align: left;
+    z-index: 2;
+    height: 40px;
+}
+#presby {
+    float: left;
+   
+    margin-right: 8px;
+    text-align: right;
+    padding-top:12px;
+}
+#sponsor img {
+    height: 40px;
+}
+
 #magicnumberwidget {
 width: 100%;
 text-align: center;
@@ -15,6 +42,7 @@ background:url(https://www.baltimoresun.com/wp-content/uploads/2024/09/TBS-L-WHO
 background-size: cover;
 background-position: 40% 90%;
 position:relative;
+height: 270px;
 }
 #magicnumberwidget a {
 color: inherit; 
@@ -24,7 +52,7 @@ color: inherit;
 position:relative;
 top:0;
 left:0;
-height:178px;
+height:270px;
 width:100%;
 background-color:#fff;
 opacity:0.9;
@@ -33,7 +61,7 @@ opacity:0.9;
 color: #DF4601;
 }
 #magicnumberwidget h2 {
-margin: 0 0 18px 0;
+margin: 0 0 14px 0;
 font-family: 'Playball', script;
 font-size: 1.8em;
 position:relative;
@@ -48,7 +76,7 @@ color: #003087;
 #magicnumberwidget span {
 display: inline-block;
 }
-#magicnumberwidget #remaining, #magicnumberwidget .magicdetails, #magicnumberwidget #timestamp {
+#magicnumberwidget #remaining, #magicnumberwidget .magicdetails, #magicnumberwidget #timestamp, #presby {
 font-weight: 100;
 font-size: .67em;
 font-style: italic;
@@ -100,17 +128,19 @@ margin-bottom: -5px;
 line-height: normal;
 }
 #magicnumberwidgetoverlay {
-height:230px;
+height:270px;
 }
 #magicnumberwidget #playoffbox, #magicnumberwidget #aleastbox {
 width: 85px;
 }
+
+
 @media (min-width: 500px) {
 #magicnumberwidget h2 {
 font-size: 2.4em;
 margin: 0 0 2px 0;
 }
-#magicnumberwidget #remaining, #magicnumberwidget .magicdetails {
+#magicnumberwidget #remaining, #magicnumberwidget .magicdetails, #presby {
 font-size: .75em;
 }
 #magicnumberwidget .magicnum {
@@ -144,6 +174,7 @@ width: 90px;
 font-size: 1.1em;
 }
 }
+
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,9 +218,18 @@ async function renderTracker() {
 </script>
 
 <div id="magicnumberwidget">
-<!--OPEN LINK HERE-->	
 <div id="magicnumberwidgetoverlay">
 <h2><span class="Orioles">Orioles</span> magic numbers</h2>
+<!--START SPONSOR BLOCK-->
+<div id="sponsor">
+
+    <div id="presby">presented by</div>
+    <div id="sponslogo"><a href="https://www.umfpi.org/?utm_source=baltsun&amp;utm_medium=magicnum&amp;utm_term=2024" target="_blank"><img src="https://www.baltimoresun.com/wp-content/uploads/2024/09/TBS-L-UMFP-LOGO-01.jpg" alt="University of Maryland Faculty Physicians logo"></a></div>
+
+</div>
+
+<!--END SPONSOR BLOCK-->
+
 <div id="numberboxes">
 <div id="playoffbox">
 <div class="berth">playoffs</div>
@@ -207,7 +247,6 @@ async function renderTracker() {
 <span id="timestamp">Playoffs updated <span id="mlbup"></span><!--via MLB data-->. AL East updated <span id="updated"></span>.</span>
 </div>
 </div>
-<!--CLOSE LINK HERE-->	
 </div>
 <!--END TRACKER CODE-->
 </body>
