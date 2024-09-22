@@ -199,6 +199,8 @@ async function renderTracker() {
     let mlbup = tracker.values[6][1];  
     let gamesleft = tracker.values[14][1];
     let yanksnum = tracker.values[16][1];
+    let ptop = tracker.values[17][1];
+    let pbot = tracker.values[18][1];
 	
 	numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
@@ -212,6 +214,10 @@ async function renderTracker() {
 	competitorname.innerHTML = competitor;
 	var mlbmagic = document.getElementById("mlbmagic");
 	mlbmagic.innerHTML = mlbmn;
+    var pofftop = document.getElementById("ptop");
+	pofftop.innerHTML = ptop;
+    var poffbot = document.getElementById("pbot");
+	poffbot.innerHTML = pbot;
 
 }
  renderTracker();
@@ -233,9 +239,9 @@ async function renderTracker() {
 <div id="numberboxes">
 <div id="playoffbox">
 <div class="berth">playoffs</div>
-<div class="magicdetails">clinched with</div>
+<div class="magicdetails" id="ptop"></div>
 <div class="magicnum"><span id="mlbmagic"></span></div>
-<div class="magicdetails undernum">O's wins <span class="orange">and/or</span> rival losses<span id="fourthwc"></span></div>
+<div class="magicdetails undernum" id="pbot"></div>
 </div>
 <div id="aleastbox">
 <div class="berth">AL East</div>
