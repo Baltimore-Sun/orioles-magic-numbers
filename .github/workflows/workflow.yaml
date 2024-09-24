@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  "0/15 0-6,19-23 * 9,10 *"
+    - cron:  ""
   workflow_dispatch:
 
 name: orioles magic numbers
