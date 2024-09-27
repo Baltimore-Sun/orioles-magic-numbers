@@ -193,13 +193,13 @@ async function renderTracker() {
     let tracker = await getTracker();
     let orioleswins = tracker.values[1][1];
     let orioleslosses = tracker.values[2][1];
-    let competitor = tracker.values[3][1];
+    //change competitor variable
+    let competitor = "Yankees clinched on 9/26";
     let mlbmn = tracker.values[5][1];
     let updated = tracker.values[7][1];
     let mlbup = tracker.values[6][1];  
     let gamesleft = tracker.values[14][1];
     let yanksnum = tracker.values[16][1];
-    //edit two variables upon clinch
     let ptop = "clinched"
     let pbot = "clinched<br>on 9/24";
 	
@@ -225,8 +225,9 @@ async function renderTracker() {
 </script>
 
 <div id="magicnumberwidget">
+<a href="https://www.baltimoresun.com/2024/09/09/orioles-magic-number-playoffs-al-east/?256_source=widget&utm_medium=web&utm_campaign=magicnum" target="_blank">
 <div id="magicnumberwidgetoverlay">
-<h2><span class="Orioles">Orioles</span> magic numbers</h2>
+<h2><span class="Orioles">Orioles</span> magic numbers</h2></a>
 <!--START SPONSOR BLOCK-->
 <div id="sponsor">
 
@@ -236,26 +237,28 @@ async function renderTracker() {
 </div>
 
 <!--END SPONSOR BLOCK-->
+<a href="https://www.baltimoresun.com/2024/09/09/orioles-magic-number-playoffs-al-east/?256_source=widget&utm_medium=web&utm_campaign=magicnum" target="_blank">
 
 <div id="numberboxes">
 <div id="playoffbox">
 <div class="berth">playoffs</div>
 <div class="magicdetails" id="ptop"></div>
-<!--uu--REPLACE # WITH CHECK-->
 <div class="magicnum"><span id="mlbmagic">&#10003;</span></div>
-
 <div class="magicdetails undernum" id="pbot"></div>
 </div>
 <div id="aleastbox">
 <div class="berth">AL East</div>
-<div class="magicdetails">eliminated with</div>
-<div class="magicnum" style="border-color:#003087;"><span id="aleast">1</span></div>
-<div class="magicdetails undernum"><span id="competitor"></span> win<br><span class="blue">or</span> O's loss</div>
+<!--uu--DELETE with-->
+<div class="magicdetails">eliminated</div>
+<!--uu--REPLACE # WITH X-->
+<div class="magicnum" style="border-color:#003087;"><span id="aleast">&#10005;</span></div>
+<div class="magicdetails undernum"><span id="competitor"></span></div>
 </div>
 </div>
-<span id="timestamp">Playoffs updated <span id="mlbup">10:31 p.m. 9/24</span><!--via MLB data-->. AL East updated <span id="updated">10:20 p.m. 9/25</span>.</span>
+<span id="timestamp">Playoffs updated <span id="mlbup">10:31 p.m. 9/24</span><!--via MLB data-->. AL East updated <span id="updated">10:00 p.m. 9/26</span>.</span>
 </div>
 </div>
+</a>
 </div>
 <!--END TRACKER CODE-->
 </body>
